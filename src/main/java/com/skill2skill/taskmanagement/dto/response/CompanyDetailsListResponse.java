@@ -5,14 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.Accessors;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Accessors(chain = true)
 @Builder
-public class GenericResponse {
+public class CompanyDetailsListResponse {
 
     @JsonProperty(value = "status")
     private Integer status;
@@ -20,6 +20,6 @@ public class GenericResponse {
     @JsonProperty(value = "message")
     private String message;
 
-    @JsonProperty(value = "message_code")
-    private String messageCode;
+    @JsonProperty(value = "company_details")
+    private List<CompanyDetail> companyDetails;
 }

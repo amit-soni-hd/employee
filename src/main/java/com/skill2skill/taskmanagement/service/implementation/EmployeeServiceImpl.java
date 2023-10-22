@@ -30,6 +30,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         return GenericResponse.builder()
                 .message("Employee id : " + save.getId())
                 .messageCode("200")
-                .status("Success").build();
+                .status(1).build();
     }
 }
